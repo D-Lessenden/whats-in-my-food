@@ -1,2 +1,8 @@
-<h2><%= "There are #{} results for your search!" %></h2>
-<% binding.pry %>
+<h2><%= "There are #{@json[:foods].count} results for your search!" %></h2>
+<% @foods.each do |food| %>
+  <p><%= "Description: #{food[:description]}" %></p>
+  <p><%= "Brand Owner: #{food[:brandOwner]}" %></p>
+  <p><%= "GTIN/UPC: #{food[:gtinUpc]}" %></p>
+  <p><%= "Ingredients: #{food[:ingredients]}" %></p>
+  <p>-----------------------</p>
+<% end %>
