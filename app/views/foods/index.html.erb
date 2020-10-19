@@ -1,8 +1,14 @@
 <h2><%= "There are #{@json[:foods].count} results for your search!" %></h2>
 <% @foods.each do |food| %>
-  <p><%= "Description: #{food[:description]}" %></p>
-  <p><%= "Brand Owner: #{food[:brandOwner]}" %></p>
-  <p><%= "GTIN/UPC: #{food[:gtinUpc]}" %></p>
-  <p><%= "Ingredients: #{food[:ingredients]}" %></p>
+
+  <p><%= food.description %></p>
+  <p><%= food.brandOwner %></p>
+  <p><%= food.gtinUpc %></p>
+  <p><%= food.ingredients %></p>
+
+  <p><%# "Description: #{food[:description]}" %></p>
+  <p><%# "Brand Owner: #{food[:brandOwner]}" %></p>
+  <p><%# "GTIN/UPC: #{food[:gtinUpc]}" %></p>
+  <p><%#{}"Ingredients: #{food[:ingredients]}" %></p>
   <p>-----------------------</p>
-<% end %>
+<% end  %>
